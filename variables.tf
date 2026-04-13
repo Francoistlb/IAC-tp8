@@ -60,3 +60,25 @@ variable "services" {
     }
   }
 }
+
+# Variables sensibles (sécurisées)
+variable "db_password" {
+  description = "Mot de passe de la base de données"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
+variable "api_key" {
+  description = "Clé API pour les services externes"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
+variable "app_secret" {
+  description = "Secret de l'application"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
